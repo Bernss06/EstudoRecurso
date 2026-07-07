@@ -65,9 +65,9 @@ namespace EstudoRecurso
 
         private void btnEliminarSuplemento_Click(object sender, EventArgs e)
         {
-            if (dgvSuplementos.CurrentRow != null)
+            if (dtaGridSuplementos.CurrentRow != null)
             {
-                int idSelecionado = (int)dgvSuplementos.CurrentRow.Cells["Id"].Value;
+                int idSelecionado = (int)dtaGridSuplementos.CurrentRow.Cells["Id"].Value;
                 _suplementoController.EliminarSuplemento(idSelecionado);
                 AtualizarGrelhaSuplementos();
             }
@@ -79,7 +79,7 @@ namespace EstudoRecurso
 
         private void AtualizarGrelhaSuplementos()
         {
-            dgvSuplementos.DataSource = _suplementoController.ObterTodosSuplementos();
+            dtaGridSuplementos.DataSource = _suplementoController.ObterTodosSuplementos();
         }
 
         private void LimparCamposSuplemento()
@@ -110,7 +110,7 @@ namespace EstudoRecurso
 
         private void btnAdicionarAoPlano_Click(object sender, EventArgs e)
         {
-            if (dgvSuplementos.CurrentRow == null)
+            if (dtaGridSuplementos.CurrentRow == null)
             {
                 MessageBox.Show("Selecione um suplemento do catálogo primeiro.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -119,9 +119,9 @@ namespace EstudoRecurso
             try
             {
                 // Ir buscar dados do item selecionado na grelha
-                int id = (int)dgvSuplementos.CurrentRow.Cells["Id"].Value;
-                string nome = dgvSuplementos.CurrentRow.Cells["Nome"].Value.ToString();
-                decimal preco = (decimal)dgvSuplementos.CurrentRow.Cells["PrecoUnidade"].Value;
+                int id = (int)dtaGridSuplementos.CurrentRow.Cells["Id"].Value;
+                string nome = dtaGridSuplementos.CurrentRow.Cells["Nome"].Value.ToString();
+                decimal preco = (decimal)dtaGridSuplementos.CurrentRow.Cells["PrecoUnidade"].Value;
 
                 int quantidade = int.Parse(txtQuantidadePlano.Text);
                 decimal subtotal = preco * quantidade;
@@ -169,8 +169,8 @@ namespace EstudoRecurso
 
         private void AtualizarVisorOrcamento()
         {
-            lblGastoAtual.Text = $"{totalGastoAtual}€";
-            lblSaldoDisponivel.Text = $"{orcamentoMensal - totalGastoAtual}€";
+            txtGastoAtual.Text = $"{totalGastoAtual}€";
+            txtSaldoDisponivel.Text = $"{orcamentoMensal - totalGastoAtual}€";
         }
 
         #endregion

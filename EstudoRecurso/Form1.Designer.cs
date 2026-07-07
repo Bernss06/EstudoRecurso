@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDefinirOrcamento = new System.Windows.Forms.Button();
             this.btnAtualizarSaldo = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSaldoDisponivel = new System.Windows.Forms.TextBox();
+            this.txtGastoAtual = new System.Windows.Forms.TextBox();
             this.txtOrcamento = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.btnEliminarSuplemento = new System.Windows.Forms.Button();
             this.dtaGridSuplementos = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnPlano = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnFecharPlano = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -53,8 +55,6 @@
             this.listBoxPlano = new System.Windows.Forms.ListView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
-            this.btnDefinirOrcamento = new System.Windows.Forms.Button();
-            this.btnPlano = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtaGridSuplementos)).BeginInit();
@@ -66,8 +66,8 @@
             // 
             this.groupBox1.Controls.Add(this.btnDefinirOrcamento);
             this.groupBox1.Controls.Add(this.btnAtualizarSaldo);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtSaldoDisponivel);
+            this.groupBox1.Controls.Add(this.txtGastoAtual);
             this.groupBox1.Controls.Add(this.txtOrcamento);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -79,6 +79,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Definição de Orçamento";
             // 
+            // btnDefinirOrcamento
+            // 
+            this.btnDefinirOrcamento.Location = new System.Drawing.Point(434, 24);
+            this.btnDefinirOrcamento.Name = "btnDefinirOrcamento";
+            this.btnDefinirOrcamento.Size = new System.Drawing.Size(154, 31);
+            this.btnDefinirOrcamento.TabIndex = 7;
+            this.btnDefinirOrcamento.Text = "Definir Orçamento ";
+            this.btnDefinirOrcamento.UseVisualStyleBackColor = true;
+            this.btnDefinirOrcamento.Click += new System.EventHandler(this.btnDefinirOrcamento_Click);
+            // 
             // btnAtualizarSaldo
             // 
             this.btnAtualizarSaldo.Location = new System.Drawing.Point(434, 137);
@@ -88,19 +98,19 @@
             this.btnAtualizarSaldo.Text = "Atualizar Saldo";
             this.btnAtualizarSaldo.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtSaldoDisponivel
             // 
-            this.textBox3.Location = new System.Drawing.Point(179, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(249, 22);
-            this.textBox3.TabIndex = 5;
+            this.txtSaldoDisponivel.Location = new System.Drawing.Point(179, 141);
+            this.txtSaldoDisponivel.Name = "txtSaldoDisponivel";
+            this.txtSaldoDisponivel.Size = new System.Drawing.Size(249, 22);
+            this.txtSaldoDisponivel.TabIndex = 5;
             // 
-            // textBox2
+            // txtGastoAtual
             // 
-            this.textBox2.Location = new System.Drawing.Point(179, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(249, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtGastoAtual.Location = new System.Drawing.Point(179, 84);
+            this.txtGastoAtual.Name = "txtGastoAtual";
+            this.txtGastoAtual.Size = new System.Drawing.Size(249, 22);
+            this.txtGastoAtual.TabIndex = 4;
             // 
             // txtOrcamento
             // 
@@ -232,6 +242,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Construção de Plano ";
             // 
+            // btnPlano
+            // 
+            this.btnPlano.Location = new System.Drawing.Point(338, 198);
+            this.btnPlano.Name = "btnPlano";
+            this.btnPlano.Size = new System.Drawing.Size(152, 29);
+            this.btnPlano.TabIndex = 11;
+            this.btnPlano.Text = "Plano";
+            this.btnPlano.UseVisualStyleBackColor = true;
+            this.btnPlano.Click += new System.EventHandler(this.btnPlano_Click);
+            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(13, 353);
@@ -309,26 +329,6 @@
             this.button10.Text = "SAIR";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // btnDefinirOrcamento
-            // 
-            this.btnDefinirOrcamento.Location = new System.Drawing.Point(434, 24);
-            this.btnDefinirOrcamento.Name = "btnDefinirOrcamento";
-            this.btnDefinirOrcamento.Size = new System.Drawing.Size(154, 31);
-            this.btnDefinirOrcamento.TabIndex = 7;
-            this.btnDefinirOrcamento.Text = "Definir Orçamento ";
-            this.btnDefinirOrcamento.UseVisualStyleBackColor = true;
-            this.btnDefinirOrcamento.Click += new System.EventHandler(this.btnDefinirOrcamento_Click);
-            // 
-            // btnPlano
-            // 
-            this.btnPlano.Location = new System.Drawing.Point(338, 198);
-            this.btnPlano.Name = "btnPlano";
-            this.btnPlano.Size = new System.Drawing.Size(152, 29);
-            this.btnPlano.TabIndex = 11;
-            this.btnPlano.Text = "Plano";
-            this.btnPlano.UseVisualStyleBackColor = true;
-            this.btnPlano.Click += new System.EventHandler(this.btnPlano_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,8 +359,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnAtualizarSaldo;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSaldoDisponivel;
+        private System.Windows.Forms.TextBox txtGastoAtual;
         private System.Windows.Forms.TextBox txtOrcamento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
